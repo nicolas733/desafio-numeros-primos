@@ -2,11 +2,25 @@ package br.com;
 
 import java.util.Scanner;
 
+import static br.com.Numero.isPrime;
+
 public class main {
     public static void main(String[] args) {
-        System.out.println("Digite um número: ");
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        System.out.println(Numero.isPrime(n));
+        while (true) {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Digite um número (ou 0 para sair): ");
+            int numero = sc.nextInt();
+
+
+            if (numero == 0) { 
+                System.out.println("Encerrando o programa...");
+                break;
+            }
+            if (isPrime(numero)) {
+                System.out.println(numero + " é primo!");
+            } else {
+                System.out.println(numero + " não é primo!");
+            }
+        }
     }
 }

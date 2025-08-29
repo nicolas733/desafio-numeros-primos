@@ -1,5 +1,7 @@
 package br.com;
 
+import java.util.Scanner;
+
 public class Numero {
     public static boolean isPrime(int n) {
         if (n <= 1) return false;
